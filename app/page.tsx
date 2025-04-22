@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ContactAccordion } from "@/components/contact-accordion"
@@ -7,9 +9,21 @@ import { SimpleContactForm } from "@/components/simple-contact-form"
 import { Instagram, Facebook } from "lucide-react"
 
 export default function Home() {
+  // Função simplificada que apenas rola para o topo
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault() // Impedir o comportamento padrão do link
+
+    // Rolar para o topo absoluto da página e permanecer lá
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto", // Usar "auto" para rolagem instantânea
+    })
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-[#f9f9f9]">
-      <header className="w-full py-3 bg-[#f9f9f9]">
+      <header className="w-full py-3 bg-[#f9f9f9] sticky top-0 z-50">
         <div className="container flex items-center justify-between">
           <Link href="/" className="h-16 md:h-20">
             <img
@@ -18,52 +32,43 @@ export default function Home() {
               className="h-full"
             />
           </Link>
-          <Button
-            asChild
-            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2"
-            onClick={() => {
-              const element = document.getElementById("contato-form")
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" })
-              }
-            }}
-          >
-            <a href="#contato-form">Contato</a>
+          <Button className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2" onClick={handleContactClick}>
+            Contato
           </Button>
         </div>
       </header>
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative bg-[#f9f9f9] pt-2 pb-8" id="contato-section">
-          <div className="container">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-start">
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <h1 className="text-4xl font-medium text-[#1C1D1F]">
-                    Planejados que <span className="font-bold">inspira e valoriza</span> seu espaço
-                  </h1>
-                  <p className="text-gray-700 max-w-md">
-                    Projetos de móveis planejados que unem estética, funcionalidade e inovação para tornar seu ambiente
-                    exclusivo.
-                  </p>
-                </div>
 
-                <SimpleContactForm />
+      {/* Formulário de contato movido para logo após o cabeçalho */}
+      <section className="relative bg-[#f9f9f9] pt-2 pb-8" id="contato-section">
+        <div className="container">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-medium text-[#1C1D1F]">
+                  Planejados que <span className="font-bold">inspira e valoriza</span> seu espaço
+                </h1>
+                <p className="text-gray-700 max-w-md">
+                  Projetos de móveis planejados que unem estética, funcionalidade e inovação para tornar seu ambiente
+                  exclusivo.
+                </p>
               </div>
 
-              {/* Imagem à direita no desktop, abaixo no mobile - SUBSTITUÍDA PELA NOVA IMAGEM */}
-              <div className="flex items-center justify-center mt-8 lg:mt-0">
-                <img
-                  src="/modern-kitchen-design.jpeg"
-                  alt="Cozinha moderna com armários cinza, bancada branca, cooktop a gás e iluminação LED"
-                  className="w-4/5 h-auto mx-auto rounded-lg shadow-lg"
-                />
-              </div>
+              <SimpleContactForm />
+            </div>
+
+            {/* Imagem à direita no desktop, abaixo no mobile */}
+            <div className="flex items-center justify-center mt-8 lg:mt-0">
+              <img
+                src="/modern-kitchen-design.jpeg"
+                alt="Cozinha moderna com armários cinza, bancada branca, cooktop a gás e iluminação LED"
+                className="w-4/5 h-auto mx-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* O resto do código permanece o mesmo... */}
+      <main className="flex-1">
         {/* Diferenciais Section */}
         <section id="diferenciais" className="py-16 bg-black text-white">
           <div className="container text-center">
@@ -105,16 +110,10 @@ export default function Home() {
                 <p className="text-2xl text-gray-700 mb-8">Projetos que unem beleza e funcionalidade.</p>
               </div>
               <Button
-                asChild
                 className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4 lg:mt-0"
-                onClick={() => {
-                  const element = document.getElementById("contato-form")
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" })
-                  }
-                }}
+                onClick={handleContactClick}
               >
-                <a href="#contato-form">Fale conosco +</a>
+                Fale conosco +
               </Button>
             </div>
 
@@ -154,16 +153,10 @@ export default function Home() {
                   qualidade e design moderno para compor seu ambiente.
                 </p>
                 <Button
-                  asChild
                   className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4"
-                  onClick={() => {
-                    const element = document.getElementById("contato-form")
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" })
-                    }
-                  }}
+                  onClick={handleContactClick}
                 >
-                  <a href="#contato-form">Fale conosco +</a>
+                  Fale conosco +
                 </Button>
               </div>
               <div className="relative">
@@ -198,10 +191,11 @@ export default function Home() {
                 <ContactAccordion />
 
                 <div className="pt-6">
-                  <Button asChild className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6">
-                    <Link href="#contato-form" scroll={false}>
-                      Fale conosco agora
-                    </Link>
+                  <Button
+                    className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6"
+                    onClick={handleContactClick}
+                  >
+                    Fale conosco agora
                   </Button>
                 </div>
               </div>
@@ -259,10 +253,11 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">
                   Projetos para casa completa de alta qualidade e preço justo!
                 </h3>
-                <Button asChild className="bg-black hover:bg-black/90 text-white rounded-none px-6 py-4 mt-2">
-                  <Link href="#contato-form" scroll={false}>
-                    Fale conosco +
-                  </Link>
+                <Button
+                  className="bg-black hover:bg-black/90 text-white rounded-none px-6 py-4 mt-2"
+                  onClick={handleContactClick}
+                >
+                  Fale conosco +
                 </Button>
               </div>
             </div>
@@ -277,16 +272,10 @@ export default function Home() {
             Serviços personalizados para criar o espaço dos seus sonhos
           </h2>
           <Button
-            asChild
             className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 border-2 border-white"
-            onClick={() => {
-              const element = document.getElementById("contato-form")
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" })
-              }
-            }}
+            onClick={handleContactClick}
           >
-            <a href="#contato-form">Fale conosco agora</a>
+            Fale conosco agora
           </Button>
 
           {/* Social Media Buttons */}
