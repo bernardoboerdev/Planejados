@@ -59,8 +59,8 @@ export default function Home() {
             {/* Imagem à direita no desktop, abaixo no mobile */}
             <div className="flex items-center justify-center mt-8 lg:mt-0">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-6782465.jpg-ayf5TTBIfLx0WL8kgDD8u2n4QES1qQ.jpeg"
-                alt="Closet planejado minimalista com prateleiras iluminadas, gavetas e espaço para pendurar roupas"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-ekrulila-8569470.jpg-G0SAD83tmB3Z5xkIxJFpYw79v1U6bg.jpeg"
+                alt="Cozinha moderna com armários planejados em madeira, mesa de jantar com cadeiras azuis e piso em espinha de peixe"
                 className="w-4/5 h-auto mx-auto rounded-lg shadow-lg"
               />
             </div>
