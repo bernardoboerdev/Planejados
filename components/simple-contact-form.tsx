@@ -14,10 +14,11 @@ export function SimpleContactForm() {
     name: "",
     email: "",
     phone: "",
+    ambiente: "", // Alterado de "cozinha" para string vazia
     terms: false,
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -52,6 +53,7 @@ export function SimpleContactForm() {
         name: "",
         email: "",
         phone: "",
+        ambiente: "",
         terms: false,
       })
     } catch (error) {
@@ -100,6 +102,26 @@ export function SimpleContactForm() {
         required
         className="w-full border border-gray-300 bg-white text-gray-800 rounded-none p-3"
       />
+
+      <select
+        name="ambiente"
+        value={formData.ambiente}
+        onChange={(e) => setFormData((prev) => ({ ...prev, ambiente: e.target.value }))}
+        className={`w-full border border-gray-300 bg-white rounded-none p-3 ${
+          formData.ambiente === "" ? "text-gray-400" : "text-gray-800"
+        }`}
+      >
+        <option value="" disabled className="text-gray-400">
+          Ambiente
+        </option>
+        <option value="cozinha">Cozinha</option>
+        <option value="sala">Sala</option>
+        <option value="quartos">Quartos</option>
+        <option value="banheiros">Banheiros</option>
+        <option value="completo">Completo</option>
+        <option value="outros">Outros</option>
+      </select>
+      <p className="text-xs text-gray-500">Qual ambiente você deseja transformar?</p>
 
       <div className="flex items-start space-x-2">
         <Checkbox

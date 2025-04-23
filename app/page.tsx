@@ -119,8 +119,8 @@ export default function Home() {
 
             <div className="w-full">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-8134812.jpg-H8Sm0CSmaGuRBAmm0eZFfXYuE8E4dt.jpeg"
-                alt="Closet planejado em madeira clara com prateleiras, espaços para pendurar roupas e gavetas, ao lado de um banheiro moderno"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE1EB870-DAB4-44D5-822D-AB0F5B6E28F0%7D-QHRJTiFXuj9CjwYCJkjGwDxNFVOcVu.png"
+                alt="Cozinha planejada em formato corredor com armários em madeira clara, bancada escura e revestimento em tons neutros"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -161,8 +161,8 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-cottonbro-7404938.jpg-GU5sILarkBnrBD8f6592Sxr4B4HWDq.jpeg"
-                  alt="Sala de estar minimalista com sofá branco, mesa de centro de madeira, lareira embutida com velas e nicho para lenha"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B5FA5A9D3-168E-4492-84B7-A75A4374BE2A%7D-ZHwTxrlDJ93ur0UZm0hsHQ3uxtOeSx.png"
+                  alt="Quarto elegante com armários planejados em tom azul acinzentado, cama com cabeceira estofada roxa e decoração minimalista"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
@@ -176,8 +176,8 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-jonathanborba-5570226.jpg-Zjdrfh4ZsoOL7azamqzi2bZYE2qq1l.jpeg"
-                  alt="Sala de jantar moderna com mesa branca, cadeiras estofadas claras e escada flutuante de madeira em ambiente integrado com pé-direito alto"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B2A3E6D73-AA92-4478-9BE1-4038AA1D338B%7D-iszlf82kSrl7xrQzYGx6avUNJhrN8J.png"
+                  alt="Cozinha moderna minimalista em L com armários brancos, bancadas brancas, cooktop a gás embutido, vista para a cidade e piso em mármore"
                   className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
@@ -209,8 +209,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="flex flex-col space-y-4">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img%20miss%C3%A3o.png-j30w8nMuF4l397b0WNRHH5BgznNWFp.jpeg"
-                  alt="Console de madeira elegante com obra de arte abstrata vermelha, planta monstera e abajur sobre parede de concreto"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-alexander-f-ungerer-157458816-19807276.jpg-vcVKFp5pxBKEu8cqyzafq8p9XlLRH7.jpeg"
+                  alt="Cozinha moderna com armários brancos, bancadas cinza escuro e revestimento em azulejos brancos"
                   className="w-full aspect-[3/4] object-cover rounded-lg"
                 />
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Missão</h3>
@@ -221,8 +221,8 @@ export default function Home() {
 
               <div className="flex flex-col space-y-4">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_2025-04-17_23.16.44-5EaSbYMGsvgbfX0zK3fgKDZrTKvg0E.png"
-                  alt="Sala de estar em estilo japonês minimalista com sofá branco, mesa de centro de madeira e arte de flores de cerejeira na parede"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-vidalbalielojrfotografia-11295829.jpg-zjhaqG47YO3M3f5v3gvN4fbC9TxwUd.jpeg"
+                  alt="Cozinha contemporânea com ilha central, armários brancos com detalhes em madeira e parede de tijolos aparentes"
                   className="w-full aspect-[3/4] object-cover rounded-lg"
                 />
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Visão</h3>
@@ -234,8 +234,8 @@ export default function Home() {
 
               <div className="flex flex-col space-y-4">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_2025-04-17_23.16.57.png-CwFLakEqqqzHxFaWalonHBWteCx5mF.jpeg"
-                  alt="Sala de estar elegante com sofá branco, almofadas marrons, mesa de centro de madeira e fotografia de palmeiras na parede"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-7005285.jpg-HkJ2Yq8Ep1fuoRxkXEcmJ4Cb1fue6k.jpeg"
+                  alt="Closet planejado com prateleiras, gavetas e cabideiro em tons neutros de branco e madeira clara"
                   className="w-full aspect-[3/4] object-cover rounded-lg"
                 />
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Valores</h3>
@@ -246,8 +246,8 @@ export default function Home() {
 
               <div className="flex flex-col space-y-4">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_2025-04-17_23.17.10-qPxP4kHknDXDdwZCx65pwaoVlBtJpf.png"
-                  alt="Hall de entrada luxuoso com parede texturizada branca, console de madeira natural e decoração minimalista em tons neutros"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-antonio-lorenzana-bermejo-353570724-14577469.jpg-UYTtnQsvHgJsV9NpYeV822JATo0HVE.jpeg"
+                  alt="Pequena cozinha compacta com bancada de granito, armários em madeira, coifa em inox e banquetas de madeira"
                   className="w-full aspect-[3/4] object-cover rounded-lg"
                 />
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">
