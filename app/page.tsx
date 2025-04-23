@@ -59,8 +59,8 @@ export default function Home() {
             {/* Imagem à direita no desktop, abaixo no mobile */}
             <div className="flex items-center justify-center mt-8 lg:mt-0">
               <img
-                src="/modern-kitchen-design.jpeg"
-                alt="Cozinha moderna com armários cinza, bancada branca, cooktop a gás e iluminação LED"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-6782465.jpg-ayf5TTBIfLx0WL8kgDD8u2n4QES1qQ.jpeg"
+                alt="Closet planejado minimalista com prateleiras iluminadas, gavetas e espaço para pendurar roupas"
                 className="w-4/5 h-auto mx-auto rounded-lg shadow-lg"
               />
             </div>
@@ -119,8 +119,8 @@ export default function Home() {
 
             <div className="w-full">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B9217F99B-4EA1-4195-B486-AD464DB8917E%7D-9sEyowogOSdlxPecTQuuUXy5zcEOsc.png"
-                alt="Interior minimalista com escada curva e espaço de estar elegante"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-8134812.jpg-H8Sm0CSmaGuRBAmm0eZFfXYuE8E4dt.jpeg"
+                alt="Closet planejado em madeira clara com prateleiras, espaços para pendurar roupas e gavetas, ao lado de um banheiro moderno"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -161,8 +161,8 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B4255468B-E471-48A2-8152-3EE3A2F2C972%7D-ejmPV8WVadRPi00LUUH7TOOQWI680j.png"
-                  alt="Sala de jantar moderna com paredes terracota e móveis elegantes"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-cottonbro-7404938.jpg-GU5sILarkBnrBD8f6592Sxr4B4HWDq.jpeg"
+                  alt="Sala de estar minimalista com sofá branco, mesa de centro de madeira, lareira embutida com velas e nicho para lenha"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
@@ -176,8 +176,8 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BB7DD2C82-91EC-4A9B-A227-570B91AD5147%7D-i25XMXmmNR6RdeCWhHRmMSYKKfHyLN.png"
-                  alt="Colagem de interiores minimalistas com elementos naturais e luz"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-jonathanborba-5570226.jpg-Zjdrfh4ZsoOL7azamqzi2bZYE2qq1l.jpeg"
+                  alt="Sala de jantar moderna com mesa branca, cadeiras estofadas claras e escada flutuante de madeira em ambiente integrado com pé-direito alto"
                   className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
