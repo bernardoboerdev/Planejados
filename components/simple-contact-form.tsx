@@ -14,7 +14,7 @@ export function SimpleContactForm() {
     name: "",
     email: "",
     phone: "",
-    ambiente: "", // Alterado de "cozinha" para string vazia
+    ambiente: "",
     terms: false,
   })
 
@@ -43,19 +43,45 @@ export function SimpleContactForm() {
     setIsSubmitting(true)
 
     try {
-      toast({
-        title: "Formulário enviado",
-        description: "Entraremos em contato em breve!",
-        variant: "default",
+      // Criar um FormData object para enviar
+      const form = e.target as HTMLFormElement
+      const formDataObj = new FormData(form)
+
+      // Adicionar o valor do checkbox terms manualmente
+      formDataObj.set("terms", formData.terms ? "Sim" : "Não")
+
+      // Enviar o formulário usando fetch
+      const response = await fetch("https://formspree.io/f/xyzwylqo", {
+        method: "POST",
+        body: formDataObj,
+        headers: {
+          Accept: "application/json",
+        },
       })
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        ambiente: "",
-        terms: false,
-      })
+      if (response.ok) {
+        toast({
+          title: "Formulário enviado",
+          description: "Entraremos em contato em breve!",
+          variant: "default",
+        })
+
+        // Limpar formulário após envio bem-sucedido
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          ambiente: "",
+          terms: false,
+        })
+      } else {
+        console.error("Erro ao enviar formulário:", response.statusText)
+        toast({
+          title: "Erro ao enviar",
+          description: "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.",
+          variant: "destructive",
+        })
+      }
     } catch (error) {
       console.error("Exceção ao enviar formulário:", error)
       toast({
@@ -73,8 +99,8 @@ export function SimpleContactForm() {
       id="contato-form"
       className="space-y-4 max-w-md"
       onSubmit={handleSubmit}
+      action="https://formspree.io/f/xyzwylqo"
       method="POST"
-      data-rdstation-form-id="formulario-contato-site"
     >
       <input
         type="text"
@@ -106,7 +132,7 @@ export function SimpleContactForm() {
       <select
         name="ambiente"
         value={formData.ambiente}
-        onChange={(e) => setFormData((prev) => ({ ...prev, ambiente: e.target.value }))}
+        onChange={handleChange}
         className={`w-full border border-gray-300 bg-white rounded-none p-3 ${
           formData.ambiente === "" ? "text-gray-400" : "text-gray-800"
         }`}
@@ -135,6 +161,9 @@ export function SimpleContactForm() {
         </label>
       </div>
 
+      {/* Campo oculto para o valor do checkbox */}
+      <input type="hidden" name="terms" value={formData.terms ? "Sim" : "Não"} />
+
       <Button
         type="submit"
         className="w-full bg-black hover:bg-black/90 text-white rounded-none py-3"
@@ -142,12 +171,6 @@ export function SimpleContactForm() {
       >
         {isSubmitting ? "Enviando..." : "Fale conosco agora!"}
       </Button>
-
-      {/* Campo oculto para identificação do formulário pelo RD Station */}
-      <input type="hidden" name="identificador" value="formulario-contato-site" />
-
-      {/* Campo oculto para token do RD Station - opcional, mas recomendado */}
-      <input type="hidden" name="_token" value={process.env.RD_STATION_TOKEN || ""} />
     </form>
   )
 }

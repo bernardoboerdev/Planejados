@@ -20,28 +20,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Script de integração do RD Station */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js";
-                fjs.parentNode.insertBefore(js, fjs);
-              })(document, 'script', 'rd-js-integration');
-            `,
-          }}
-        />
-
-        {/* Código de Monitoramento do RD Station */}
-        <script
-          type="text/javascript"
-          async
-          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/58ce11a1-e42b-4a71-89ce-b4307bc65156-loader.js"
-        ></script>
-
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
