@@ -41,7 +41,7 @@ export default function Home() {
       {/* Formulário de contato movido para logo após o cabeçalho */}
       <section className="relative bg-[#f9f9f9] pt-2 pb-8" id="contato-section">
         <div className="container">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl font-medium text-[#1C1D1F]">
@@ -56,12 +56,12 @@ export default function Home() {
               <SimpleContactForm />
             </div>
 
-            {/* Imagem à direita no desktop, abaixo no mobile */}
+            {/* Imagem à direita no desktop, abaixo no mobile - ajustada para ficar menor e alinhada com o formulário */}
             <div className="flex items-center justify-center mt-8 lg:mt-0">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-ekrulila-8569470.jpg-G0SAD83tmB3Z5xkIxJFpYw79v1U6bg.jpeg"
                 alt="Cozinha moderna com armários planejados em madeira, mesa de jantar com cadeiras azuis e piso em espinha de peixe"
-                className="w-4/5 h-auto mx-auto rounded-lg shadow-lg"
+                className="w-3/4 h-auto mx-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
