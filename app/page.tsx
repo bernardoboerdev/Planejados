@@ -32,9 +32,14 @@ export default function Home() {
               className="h-full"
             />
           </Link>
-          <Button className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2" onClick={handleContactClick}>
+          <a
+            href="https://api.whatsapp.com/send?phone=5511940177290"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2 inline-flex items-center justify-center h-10 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
+          >
             Contato
-          </Button>
+          </a>
         </div>
       </header>
 
@@ -45,7 +50,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl font-medium text-[#1C1D1F]">
-                  Planejados que <span className="font-bold">inspira e valoriza</span> seu espaço
+                  Planejados que <span className="font-bold">inspiram e valorizam</span> seu espaço
                 </h1>
                 <p className="text-gray-700 max-w-md">
                   Projetos de móveis planejados que unem estética, funcionalidade e inovação para tornar seu ambiente
