@@ -185,7 +185,7 @@ export default function Home() {
               <div className="flex flex-col space-y-4">
                 <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
                   <Image
-                    src="/mission-icon-handshake.jpeg"
+                    src="/mission-icon-new.png"
                     alt="Ícone de missão - aperto de mãos representando acordo e compromisso"
                     width={200}
                     height={200}
@@ -202,7 +202,7 @@ export default function Home() {
               <div className="flex flex-col space-y-4">
                 <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
                   <Image
-                    src="/vision-icon-new.jpeg"
+                    src="/vision-icon-shield.png"
                     alt="Ícone de visão - aperto de mãos com escudo de verificação representando confiança e parceria"
                     width={200}
                     height={200}
@@ -219,7 +219,7 @@ export default function Home() {
               <div className="flex flex-col space-y-4">
                 <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
                   <Image
-                    src="/values-icon-new.jpeg"
+                    src="/values-icon-heart.png"
                     alt="Ícone de valores - duas mãos com um coração entre elas representando cuidado e respeito"
                     width={200}
                     height={200}
@@ -236,8 +236,8 @@ export default function Home() {
               <div className="flex flex-col space-y-4">
                 <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
                   <Image
-                    src="/checkmark-icon.png"
-                    alt="Ícone de marca de verificação representando qualidade e aprovação"
+                    src="/checkmark-new.png"
+                    alt="Marca de verificação representando qualidade e aprovação"
                     width={200}
                     height={200}
                     className="w-full h-auto"
