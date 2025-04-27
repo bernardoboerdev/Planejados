@@ -3,9 +3,11 @@
 import type React from "react"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ContactAccordion } from "@/components/contact-accordion"
 import { SimpleContactForm } from "@/components/simple-contact-form"
+import { FAQSection } from "@/components/faq-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import { Instagram, Facebook } from "lucide-react"
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-[#f9f9f9]">
       <header className="w-full py-3 bg-[#f9f9f9] sticky top-0 z-50">
         <div className="container flex items-center justify-between">
-          <Link href="/" className="h-16 md:h-20">
+          <Link href="/" className="h-20 md:h-24">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B60BD97E9-473A-472E-8883-130BDCD23B1D%7D-Photoroom-xeJk8Jh3BsfbMcQfzHnNSNTwG1NTY3.png"
               alt="B'Lucca"
@@ -109,37 +111,38 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-[#f9f9f9]">
           <div className="container max-w-6xl mx-auto px-4">
-            <div className="flex flex-col lg:flex-row justify-between items-start mb-8">
-              <div className="max-w-2xl">
-                <h2 className="text-4xl font-bold text-[#1C1D1F] mb-4">Transformamos ideias em espaços únicos.</h2>
-                <p className="text-2xl text-gray-700 mb-8">Projetos que unem beleza e funcionalidade.</p>
-              </div>
-              <Button
-                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4 lg:mt-0"
-                onClick={handleContactClick}
-              >
-                Fale conosco +
-              </Button>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-[#1C1D1F]">Conheça A B'Lucca Planejados</h2>
+              <div className="w-24 h-1 bg-black mx-auto mt-4 mb-8"></div>
             </div>
 
-            <div className="w-full">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE1EB870-DAB4-44D5-822D-AB0F5B6E28F0%7D-QHRJTiFXuj9CjwYCJkjGwDxNFVOcVu.png"
-                alt="Cozinha planejada em formato corredor com armários em madeira clara, bancada escura e revestimento em tons neutros"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
-              <div>
-                <h3 className="text-2xl font-bold text-[#1C1D1F] mb-6">Conheça A B'Lucca Planejados</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center">
+                <img
+                  src="/team-photo.jpeg"
+                  alt="Equipe da B'Lucca Planejados reunida em um ambiente de trabalho, mostrando o time de profissionais dedicados que trabalham nos projetos"
+                  className="w-full max-w-md rounded-lg shadow-lg"
+                />
               </div>
-              <div>
-                <p className="text-black">
+
+              <div className="space-y-6">
+                <p className="text-gray-700 text-xl leading-relaxed">
                   Somos uma equipe de profissionais especializados na área de móveis sob medida para residências,
                   escritórios, lojas e shoppings. Trabalhamos com muito empenho para manter a qualidade de nossos
                   produtos do início da fabricação até o acabamento final em nossos clientes.
                 </p>
+
+                <p className="text-gray-700 text-xl leading-relaxed">
+                  Nossa missão é transformar ambientes com soluções personalizadas que combinam funcionalidade, estética
+                  e durabilidade, sempre respeitando as necessidades e o estilo de cada cliente.
+                </p>
+
+                <Button
+                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4"
+                  onClick={handleContactClick}
+                >
+                  Fale conosco +
+                </Button>
               </div>
             </div>
           </div>
@@ -166,43 +169,10 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B5FA5A9D3-168E-4492-84B7-A75A4374BE2A%7D-ZHwTxrlDJ93ur0UZm0hsHQ3uxtOeSx.png"
-                  alt="Quarto elegante com armários planejados em tom azul acinzentado, cama com cabeceira estofada roxa e decoração minimalista"
+                  src="/modern-living-room.jpeg"
+                  alt="Sala de estar moderna com sofá em L, escada com guarda-corpo de vidro, armários planejados e iluminação integrada"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-16 bg-[#f9f9f9]">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B2A3E6D73-AA92-4478-9BE1-4038AA1D338B%7D-iszlf82kSrl7xrQzYGx6avUNJhrN8J.png"
-                  alt="Cozinha moderna minimalista em L com armários brancos, bancadas brancas, cooktop a gás embutido, vista para a cidade e piso em mármore"
-                  className="w-full h-auto object-cover rounded-lg"
-                />
-              </div>
-
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-4xl font-bold text-[#1C1D1F]">Do Conceito à Execução:</h2>
-                  <p className="text-2xl text-gray-700 mt-2">Tudo o que seu projeto precisa</p>
-                </div>
-
-                <ContactAccordion />
-
-                <div className="pt-6">
-                  <Button
-                    className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6"
-                    onClick={handleContactClick}
-                  >
-                    Fale conosco agora
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
@@ -213,48 +183,66 @@ export default function Home() {
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="flex flex-col space-y-4">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-alexander-f-ungerer-157458816-19807276.jpg-vcVKFp5pxBKEu8cqyzafq8p9XlLRH7.jpeg"
-                  alt="Cozinha moderna com armários brancos, bancadas cinza escuro e revestimento em azulejos brancos"
-                  className="w-full aspect-[3/4] object-cover rounded-lg"
-                />
+                <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
+                  <Image
+                    src="/mission-icon-handshake.jpeg"
+                    alt="Ícone de missão - aperto de mãos representando acordo e compromisso"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Missão</h3>
                 <p className="text-gray-700">
-                  Expressar cuidado e respeito aos clientes com o oferecimento de produtos e serviços de qualidade
+                  Buscamos promover o bem-estar de todos incluindo clientes funcionários e sociedade, focando na ética,
+                  transparência e integridade no serviço.
                 </p>
               </div>
 
               <div className="flex flex-col space-y-4">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-vidalbalielojrfotografia-11295829.jpg-zjhaqG47YO3M3f5v3gvN4fbC9TxwUd.jpeg"
-                  alt="Cozinha contemporânea com ilha central, armários brancos com detalhes em madeira e parede de tijolos aparentes"
-                  className="w-full aspect-[3/4] object-cover rounded-lg"
-                />
+                <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
+                  <Image
+                    src="/vision-icon-new.jpeg"
+                    alt="Ícone de visão - aperto de mãos com escudo de verificação representando confiança e parceria"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Visão</h3>
                 <p className="text-gray-700">
-                  Promover o respeito ao ser humano, tanto do ponto de vista físico como mental, atendendo a sua mais
-                  básica necessidade de moradia.
+                  Com integridade, honestidade, responsabilidade e busca pela execução buscamos ser agentes de
+                  transformação positiva na sociedade e com nossos cliente, alinhando negócios e valores.
                 </p>
               </div>
 
               <div className="flex flex-col space-y-4">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-heyho-7005285.jpg-HkJ2Yq8Ep1fuoRxkXEcmJ4Cb1fue6k.jpeg"
-                  alt="Closet planejado com prateleiras, gavetas e cabideiro em tons neutros de branco e madeira clara"
-                  className="w-full aspect-[3/4] object-cover rounded-lg"
-                />
+                <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
+                  <Image
+                    src="/values-icon-new.jpeg"
+                    alt="Ícone de valores - duas mãos com um coração entre elas representando cuidado e respeito"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">Valores</h3>
                 <p className="text-gray-700">
-                  Nosso objetivo é promover conforto e praticidade com projetos personalizados e de valor.
+                  Buscamos respeitar a dignidade de clientes e funcionários valorizando as suas diferença e tratando-os
+                  com respeito dignidade.
                 </p>
               </div>
 
               <div className="flex flex-col space-y-4">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-antonio-lorenzana-bermejo-353570724-14577469.jpg-UYTtnQsvHgJsV9NpYeV822JATo0HVE.jpeg"
-                  alt="Pequena cozinha compacta com bancada de granito, armários em madeira, coifa em inox e banquetas de madeira"
-                  className="w-full aspect-[3/4] object-cover rounded-lg"
-                />
+                <div className="w-full aspect-[3/4] bg-white rounded-lg shadow-lg flex items-center justify-center p-8">
+                  <Image
+                    src="/checkmark-icon.png"
+                    alt="Ícone de marca de verificação representando qualidade e aprovação"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">
                   Projetos para casa completa de alta qualidade e preço justo!
                 </h3>
@@ -265,6 +253,36 @@ export default function Home() {
                   Fale conosco +
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* FAQ Section */}
+        <section id="faq" className="py-16 bg-[#f9f9f9]">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-[#1C1D1F]">Perguntas Frequentes</h2>
+              <div className="w-24 h-1 bg-black mx-auto mt-4 mb-8"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Tire suas dúvidas sobre nossos serviços, processos e produtos. Se não encontrar o que procura, entre em
+                contato conosco.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <FAQSection />
+            </div>
+
+            <div className="text-center mt-12">
+              <Button
+                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6"
+                onClick={handleContactClick}
+              >
+                Ainda tem dúvidas? Fale conosco
+              </Button>
             </div>
           </div>
         </section>

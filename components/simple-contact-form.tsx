@@ -6,9 +6,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useToast } from "@/hooks/use-toast"
+import { useRouter } from "next/navigation"
 
 export function SimpleContactForm() {
   const { toast } = useToast()
+  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
@@ -60,20 +62,8 @@ export function SimpleContactForm() {
       })
 
       if (response.ok) {
-        toast({
-          title: "Formulário enviado",
-          description: "Entraremos em contato em breve!",
-          variant: "default",
-        })
-
-        // Limpar formulário após envio bem-sucedido
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          ambiente: "",
-          terms: false,
-        })
+        // Redirecionar para a página de sucesso em vez de mostrar um toast
+        router.push("/sucesso")
       } else {
         console.error("Erro ao enviar formulário:", response.statusText)
         toast({
@@ -81,6 +71,7 @@ export function SimpleContactForm() {
           description: "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.",
           variant: "destructive",
         })
+        setIsSubmitting(false)
       }
     } catch (error) {
       console.error("Exceção ao enviar formulário:", error)
@@ -89,7 +80,6 @@ export function SimpleContactForm() {
         description: "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.",
         variant: "destructive",
       })
-    } finally {
       setIsSubmitting(false)
     }
   }
