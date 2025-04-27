@@ -52,11 +52,11 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl font-medium text-[#1C1D1F]">
-                  Planejados que <span className="font-bold">inspiram e valorizam</span> seu espaço
+                  Transforme ambientes comuns em espaços extraordinários com móveis planejados sob medida.
                 </h1>
                 <p className="text-gray-700 max-w-md">
-                  Projetos de móveis planejados que unem estética, funcionalidade e inovação para tornar seu ambiente
-                  exclusivo.
+                  Com móveis planejados sob medida, cada canto da sua casa ganha vida e funcionalidade, refletindo sua
+                  personalidade em cada detalhe.
                 </p>
               </div>
 
