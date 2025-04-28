@@ -5,10 +5,10 @@ import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { SimpleContactForm } from "@/components/simple-contact-form"
 import { FAQSection } from "@/components/faq-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { Instagram, Facebook } from "lucide-react"
+import { ImageCarousel } from "@/components/image-carousel"
 
 export default function Home() {
   // Função simplificada que apenas rola para o topo
@@ -22,6 +22,22 @@ export default function Home() {
       behavior: "auto", // Usar "auto" para rolagem instantânea
     })
   }
+
+  // Imagens para o carrossel
+  const carouselImages = [
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-ekrulila-8569470.jpg-G0SAD83tmB3Z5xkIxJFpYw79v1U6bg.jpeg",
+      alt: "Cozinha moderna com armários planejados em madeira, mesa de jantar com cadeiras azuis e piso em espinha de peixe",
+    },
+    {
+      src: "/modern-bathroom.jpeg",
+      alt: "Banheiro moderno com armário planejado, espelho com iluminação LED e acabamentos elegantes",
+    },
+    {
+      src: "/modern-kitchen.jpeg",
+      alt: "Cozinha planejada com armários brancos, eletrodomésticos embutidos e iluminação em LED no teto de madeira",
+    },
+  ]
 
   return (
     <div className="flex min-h-screen flex-col bg-[#f9f9f9]">
@@ -45,31 +61,36 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Formulário de contato movido para logo após o cabeçalho */}
-      <section className="relative bg-[#f9f9f9] pt-2 pb-8" id="contato-section">
+      {/* Hero Section */}
+      <section className="relative bg-[#f9f9f9] pt-8 pb-16" id="hero-section">
         <div className="container">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl font-medium text-[#1C1D1F]">
+                <h1 className="text-5xl font-medium text-[#1C1D1F]">
                   Transforme seu ambiente com móveis planejados sob medida.
                 </h1>
-                <p className="text-gray-700 max-w-md">
+                <p className="text-gray-700 text-xl max-w-md">
                   Com móveis planejados sob medida, cada canto da sua casa ganha vida e funcionalidade, refletindo sua
                   personalidade em cada detalhe.
                 </p>
               </div>
 
-              <SimpleContactForm />
+              <a
+                href="https://api.whatsapp.com/send?phone=5511940177290"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
+              >
+                Entre em contato
+              </a>
             </div>
 
-            {/* Imagem à direita no desktop, abaixo no mobile - ajustada para ficar menor e alinhada com o formulário */}
+            {/* Carrossel de imagens à direita no desktop, abaixo no mobile */}
             <div className="flex items-center justify-center mt-8 lg:mt-0">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-ekrulila-8569470.jpg-G0SAD83tmB3Z5xkIxJFpYw79v1U6bg.jpeg"
-                alt="Cozinha moderna com armários planejados em madeira, mesa de jantar com cadeiras azuis e piso em espinha de peixe"
-                className="w-3/4 h-auto mx-auto rounded-lg shadow-lg"
-              />
+              <div className="w-full max-w-md h-[600px]">
+                <ImageCarousel images={carouselImages} interval={5000} className="w-full h-full" verticalMode={true} />
+              </div>
             </div>
           </div>
         </div>
