@@ -31,6 +31,7 @@ export function ImageCarousel({ images, interval = 5000, className = "", vertica
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
+          style={{ display: index === currentIndex ? "block" : "none" }} // Garante que imagens ocultas não ocupem espaço
         >
           <img
             src={image.src || "/placeholder.svg"}
@@ -41,7 +42,7 @@ export function ImageCarousel({ images, interval = 5000, className = "", vertica
       ))}
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
         {images.map((_, index) => (
           <button
             key={index}

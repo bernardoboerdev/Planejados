@@ -63,14 +63,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-[#f9f9f9] pt-8 pb-16" id="hero-section">
-        <div className="container">
+        <div className="container px-4">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-5xl font-medium text-[#1C1D1F]">
+                <h1 className="text-4xl md:text-5xl font-medium text-[#1C1D1F]">
                   Transforme seu ambiente com móveis planejados sob medida.
                 </h1>
-                <p className="text-gray-700 text-xl max-w-md">
+                <p className="text-lg md:text-xl text-gray-700 max-w-md">
                   Com móveis planejados sob medida, cada canto da sua casa ganha vida e funcionalidade, refletindo sua
                   personalidade em cada detalhe.
                 </p>
@@ -87,8 +87,8 @@ export default function Home() {
             </div>
 
             {/* Carrossel de imagens à direita no desktop, abaixo no mobile */}
-            <div className="flex items-center justify-center mt-8 lg:mt-0">
-              <div className="w-full max-w-md h-[600px]">
+            <div className="w-full flex justify-center mt-8 lg:mt-0">
+              <div className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[400px] sm:h-[500px] md:h-[600px]">
                 <ImageCarousel images={carouselImages} interval={5000} className="w-full h-full" verticalMode={true} />
               </div>
             </div>
@@ -99,9 +99,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Diferenciais Section */}
         <section id="diferenciais" className="py-16 bg-black text-white">
-          <div className="container text-center">
+          <div className="container text-center px-4">
             <p className="uppercase tracking-wider text-center mb-2">DIFERENCIAIS</p>
-            <h2 className="text-5xl font-bold text-center mb-12">O que oferecemos</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">O que oferecemos</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="space-y-4">
@@ -171,7 +171,7 @@ export default function Home() {
 
         {/* Detalhes Section (Replacing Testimonials) */}
         <section className="py-16 bg-[#f9f9f9]">
-          <div className="container">
+          <div className="container px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-[#1C1D1F]">
