@@ -8,9 +8,9 @@ import { Instagram, Facebook } from "lucide-react"
 import { ImageCarousel } from "@/components/image-carousel"
 
 export default function Home() {
-  // Link do WhatsApp atualizado
+  // Link do WhatsApp atualizado para o novo número
   const whatsappLink =
-    "https://wa.me/message/BL7J4A5UUXQCG1?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20m%C3%B3veis%20planejados"
+    "https://wa.me/5511940177290?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20m%C3%B3veis%20planejados"
 
   // Imagens para o carrossel
   const carouselImages = [
