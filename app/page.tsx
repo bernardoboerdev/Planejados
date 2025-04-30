@@ -1,27 +1,16 @@
 "use client"
 
-import type React from "react"
-
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { FAQSection } from "@/components/faq-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { Instagram, Facebook } from "lucide-react"
 import { ImageCarousel } from "@/components/image-carousel"
 
 export default function Home() {
-  // Função simplificada que apenas rola para o topo
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault() // Impedir o comportamento padrão do link
-
-    // Rolar para o topo absoluto da página e permanecer lá
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "auto", // Usar "auto" para rolagem instantânea
-    })
-  }
+  // Link do WhatsApp atualizado
+  const whatsappLink =
+    "https://wa.me/message/BL7J4A5UUXQCG1?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20m%C3%B3veis%20planejados"
 
   // Imagens para o carrossel
   const carouselImages = [
@@ -51,7 +40,7 @@ export default function Home() {
             />
           </Link>
           <a
-            href="https://api.whatsapp.com/send?phone=5511940177290"
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2 inline-flex items-center justify-center h-10 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
@@ -77,7 +66,7 @@ export default function Home() {
               </div>
 
               <a
-                href="https://api.whatsapp.com/send?phone=5511940177290"
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
@@ -158,12 +147,14 @@ export default function Home() {
                   e durabilidade, sempre respeitando as necessidades e o estilo de cada cliente.
                 </p>
 
-                <Button
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4"
-                  onClick={handleContactClick}
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
                 >
                   Fale conosco +
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -181,12 +172,14 @@ export default function Home() {
                   Sempre em busca da máxima satisfação de nossos clientes, fabricamos móveis planejados de alta
                   qualidade e design moderno para compor seu ambiente.
                 </p>
-                <Button
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 mt-4"
-                  onClick={handleContactClick}
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
                 >
                   Fale conosco +
-                </Button>
+                </a>
               </div>
               <div className="relative">
                 <img
@@ -267,12 +260,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-[#1C1D1F] mt-2">
                   Projetos para casa completa de alta qualidade e preço justo!
                 </h3>
-                <Button
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-6 py-4 mt-2"
-                  onClick={handleContactClick}
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-black/90 text-white rounded-none px-6 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-2"
                 >
                   Fale conosco +
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -298,12 +293,14 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-12">
-              <Button
-                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6"
-                onClick={handleContactClick}
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
               >
                 Ainda tem dúvidas? Fale conosco
-              </Button>
+              </a>
             </div>
           </div>
         </section>
@@ -315,12 +312,14 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6 max-w-3xl">
             Serviços personalizados para criar o espaço dos seus sonhos
           </h2>
-          <Button
-            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 border-2 border-white"
-            onClick={handleContactClick}
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border-2 border-white"
           >
             Fale conosco agora
-          </Button>
+          </a>
 
           {/* Social Media Buttons */}
           <div className="flex space-x-4 mt-4">
@@ -371,7 +370,7 @@ export default function Home() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://api.whatsapp.com/send?phone=5511940177290"
+        href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md hover:bg-[#20BA5C] transition-all duration-300"
