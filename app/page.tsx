@@ -43,7 +43,7 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-2 inline-flex items-center justify-center h-10 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
+            className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-2 inline-flex items-center justify-center h-10 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
           >
             Contato
           </a>
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-medium text-[#1C1D1F]">
-                  Transforme seu ambiente com móveis planejados sob medida.
+                  Móveis planejados que elevam seu espaço – Personalização e qualidade que você sente todos os dias.
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 max-w-md">
                   Com móveis planejados sob medida, cada canto da sua casa ganha vida e funcionalidade, refletindo sua
@@ -69,9 +69,9 @@ export default function Home() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
+                className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
               >
-                Entre em contato
+                Solicitar Orçamento
               </a>
             </div>
 
@@ -94,24 +94,22 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold">Projetos sob-medida</h3>
+                <h3 className="text-2xl font-semibold">Empresa Familiar com Atendimento Personalizado</h3>
                 <p className="text-white">
-                  Nossa equipe de projetistas cria projetos personalizados. Não usamos peças modulares. Isso otimiza o
-                  espaço interno dos móveis e ajuda no design do ambiente.
+                  Somos uma marcenaria de família, e tratamos cada projeto como se fosse para nossa própria casa.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold">Matérias-primas</h3>
+                <h3 className="text-2xl font-semibold">Preço Justo com Transparência Total</h3>
                 <p className="text-white">
-                  As matérias-primas utilizadas em nossos projetos são MDFs resinados de excelente qualidade, com
-                  tratamento anti-cupim, proteção antibacteriana e anti-mofo.
+                  Na nossa marcenaria, prezamos por uma relação de confiança com cada cliente. Por isso, praticamos
+                  preços justos, alinhados à qualidade dos materiais e à dedicação envolvida em cada projeto.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold">Entrega e montagem</h3>
+                <h3 className="text-2xl font-semibold">Proteção Extra Contra Desgaste e Danos</h3>
                 <p className="text-white">
-                  Nossa equipe de entrega e montagem é treinada para instalação perfeita do projeto. Nos preocupamos com
-                  as quinas e objetos presentes nos ambientes para que nada seja danificado no momento da instalação.
+                  Usamos acabamentos de alta proteção para que seu móvel continue novo por muito mais tempo.
                 </p>
               </div>
             </div>
@@ -151,7 +149,7 @@ export default function Home() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
+                  className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
                 >
                   Fale conosco +
                 </a>
@@ -176,7 +174,7 @@ export default function Home() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
+                  className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-4"
                 >
                   Fale conosco +
                 </a>
@@ -264,7 +262,7 @@ export default function Home() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black hover:bg-black/90 text-white rounded-none px-6 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-2"
+                  className="bg-primary hover:bg-primary/90 text-white rounded-none px-6 py-4 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background mt-2"
                 >
                   Fale conosco +
                 </a>
@@ -297,7 +295,7 @@ export default function Home() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
+                className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
               >
                 Ainda tem dúvidas? Fale conosco
               </a>
@@ -316,7 +314,7 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black hover:bg-black/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border-2 border-white"
+            className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-6 inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border-2 border-white"
           >
             Fale conosco agora
           </a>
