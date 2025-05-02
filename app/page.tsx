@@ -45,7 +45,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 py-2 inline-flex items-center justify-center h-10 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
           >
-            Contato
+            Solicitar Orçamento
           </a>
         </div>
       </header>
